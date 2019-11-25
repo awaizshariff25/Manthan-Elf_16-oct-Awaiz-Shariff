@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>empwebapp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>countryCode</param-name>
+  	<param-value>91</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>myfirstservlet</servlet-name>
+  	<servlet-class>com.manthan.empwebapp.servlets.MyFirstServlets</servlet-class>
+  	
+	<init-param>
+		<param-name>message</param-name>
+		<param-value>This is Servlet config.........</param-value>
+	</init-param>  
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>myfirstservlet</servlet-name>
+  	<url-pattern>/myfirstservlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>getEmployeeservlet</servlet-name>
+  	<servlet-class>com.manthan.empwebapp.servlets.GetEmployeeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>getEmployeeservlet</servlet-name>
+  	<url-pattern>/getEmployee</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>getEmployeeservlet2</servlet-name>
+  	<servlet-class>com.manthan.empwebapp.servlets.GetEmployeeServlet2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>getEmployeeservlet2</servlet-name>
+  	<url-pattern>/getEmployeeservlet2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>myFirstjsp</servlet-name>
+  	<jsp-file>/myFirstjsp.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>myFirstjsp</servlet-name>
+  	<url-pattern>/firstjsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>mysecondjsp</servlet-name>
+  	<jsp-file>/WEB-INF/MySecondjsp.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>mysecondjsp</servlet-name>
+  	<url-pattern>/secondjsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Loginform</servlet-name>
+  	<jsp-file>/jsp/LoginForm.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Loginform</servlet-name>
+  	<url-pattern>/loginform</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>homepage</servlet-name>
+  	<jsp-file>/jsp/HomePage.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>homepage</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchpage</servlet-name>
+  	<jsp-file>/jsp/SearchEmployee.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchpage</servlet-name>
+  	<url-pattern>/searchEmployeeForm</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>addEmpForm</servlet-name>
+  	<jsp-file>/jsp/AddEmployeeForm.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>addEmpForm</servlet-name>
+  	<url-pattern>/addEmployeeForm1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>delEmp</servlet-name>
+  	<jsp-file>/jsp/DeleteEmployee.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>delEmp</servlet-name>
+  	<url-pattern>/deleteEmployeeForm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>LoginAws</servlet-name>
+  <jsp-file>/jsp/LoginAws.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginAws</servlet-name>
+  <url-pattern>/LoginAws</url-pattern>
+  </servlet-mapping> 
+    
+   <servlet>
+  <servlet-name>DAws</servlet-name>
+  <jsp-file>/jsp/Display.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DAws</servlet-name>
+  <url-pattern>/DAws</url-pattern>
+  </servlet-mapping> 
+</web-app>
