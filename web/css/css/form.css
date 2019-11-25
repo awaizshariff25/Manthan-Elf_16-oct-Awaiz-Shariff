@@ -1,0 +1,46 @@
+form{
+    border: 1px solid black;
+    width: 300px;
+    height: 320px;
+    text-align: center;
+    margin-left: 670px;
+    margin-top: 175px;
+    border-radius: 25px;
+    background-image: url(/images/full-moon-4593195__340.jpg);
+    background-size: cover;
+    color:white;
+    font-size: 19px;
+    font-family: cursive;
+    box-shadow: 0 0 50px rgb(7, 170, 129);
+}
+
+body{
+    background-image : url(/images/morning-4573991__340.jpg);
+    background-size: cover;
+}
+
+input[type="text"],input[type="password"]{
+    width: 200px;
+    height: 23px;
+    border: 1px solid rgbc(23, 23, 78,0.98);
+    border-radius: 50px;
+    outline: none;
+    text-align: center;
+    font-size: medium;
+}
+
+input[type="submit"]{
+    font-family: cursive;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    border: 2px solid green;
+    border-radius: 50px ;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background-color: indianred;
+    color: ivory;
+    cursor: pointer;
+}

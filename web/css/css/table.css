@@ -1,0 +1,39 @@
+table,th,td{
+    
+    /* border: 1px solid black;
+    border-collapse: collapse; */
+    text-align: center;
+    padding: 10px;
+    margin-left: 350px;
+    margin-top: 100px;
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 75px;
+    
+}
+
+table{
+    width: 500px;
+}
+
+th{
+    background-color: brown;
+    color:rgb(215, 214, 231);
+}
+
+tr:nth-child(even){
+    background-color: cadetblue;
+}
+
+tr:nth-child(odd){
+    background-color: cyan;
+}
+td:hover{
+    color: ivory;
+    cursor: pointer;
+}
+
+body{
+    background-image: url(/images/hot-air-balloons-4561267__340.jpg);
+    background-size: cover;
+}
