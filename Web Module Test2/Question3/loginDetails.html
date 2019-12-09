@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Details</title>
+    <style>
+        #loginDetailDiv {
+            width: 30%;
+            margin: auto;
+            padding: 5%;
+        }
+    </style>
+
+</head>
+<script>
+    function loadFunc() {
+        var users = JSON.parse(localStorage.getItem('Users')) || [];
+        var tableDiv = document.getElementById("tableDetails");
+
+        for (var key in users) {
+            if (users.hasOwnProperty(key)) {
+                var innerUserObj = users[key];
+                var trElmt = document.createElement("tr");
+                for (var key in innerUserObj) {
+                    if (key == 0) { //for email
+                        var tdElement1 = document.createElement("td");
+                        tdElement1.innerHTML = innerUserObj[key]["Email"];
+                        trElmt.appendChild(tdElement1);
+                    } else if (key == 1) { //phone number
+                        var tdElemt2 = document.createElement("td");
+                        tdElemt2.innerHTML = innerUserObj[key]["Phone"]
+                        trElmt.appendChild(tdElemt2);
+                    }
+                }
+                tableDiv.appendChild(trElmt);
+            }
+        }
+    }
+</script>
+
+<body onload="loadFunc()">
+    <div id="loginDetailDiv">
+        <h3 style="text-align: center;">Login User Details</h3>
+        <table width="100%" border="1" cellpadding="4" style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Email Id</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody id="tableDetails">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

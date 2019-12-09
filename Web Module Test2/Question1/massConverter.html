@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA_compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <title>Weight Converted</title>
+  <script>
+  function calculateValue(){
+    document.getElementById("outputDiv").style.display = "block";
+    let output = document.getElementById('lbsInput').value;
+    document.getElementById("gramsOutput").innerHTML = output / 0.001;
+    document.getElementById("kgOutput").innerHTML = output;
+  }
+  </script>
+</head>
+<body>
+  <div class="container" style='background: #ccc;padding: 25px; margin-top: 10%;'>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center">Weight Converter</h1>
+        <form>
+          <div class="form-group">
+            <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Kilos..." onchange='calculateValue()'>
+          </div>
+        </form>
+        <div id="outputDiv" style='display:none;'>
+          <div class="card card-primary" style='width: 49%;display: inline-block;'>
+            <div class="card-block">
+              <span><b>Grams:</b></span>
+              <span id="gramsOutput"></span>
+            </div>
+          </div>
+
+          <div class="card card-primary" style='width: 49%;display: inline-block;'>
+            <div class="card-block">
+              <span><b>Kilograms:</b></span>
+              <span id="kgOutput"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
